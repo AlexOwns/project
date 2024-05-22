@@ -1,0 +1,14 @@
+#include "stdio.h"
+int lab1();
+int dop1();
+int lab2();
+int dop2();
+int lab3();
+int dop3();
+int lab4();
+int dop4();
+int lab5();
+int dop5();
+int lab6();
+int dop6();
+int lab7();
