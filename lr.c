@@ -77,7 +77,7 @@ int lab3(){
     int contains_a = 0;
     int word_count = 0;
 
-    printf("Введите текст: ");
+    printf("Enter the text:");
 
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\t' || c == '\n' || c == '\r') {
@@ -100,7 +100,7 @@ int lab3(){
         word_count++;
     }
 
-    printf("Количество слов, содержащих букву 'а': %d\n", word_count);
+    printf("The number of words containing the letter 'a': %d\n", word_count);
 
     return 0;
 }
@@ -111,7 +111,7 @@ int dop3(){
     int contains_b = 0;
     int word_count = 0;
 
-    printf("Введите текст: ");
+    printf("Enter the text:");
 
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == ',' || c == '.' || c == '\n') {
@@ -137,7 +137,7 @@ int dop3(){
         word_count++;
     }
 
-    printf("Количество слов, содержащих букву 'a', но не содержащих букву 'b': %d\n", word_count);
+    printf("The number of words containing the letter 'a' but not containing the letter 'b': %d\n", word_count);
 
     return 0;
 }
@@ -190,7 +190,7 @@ int lab4(){
 
     remove_words(input);
 
-    printf("Результат: %s\n", input);
+    printf("Result: %s\n", input);
 
     return 0;
 }
@@ -259,11 +259,11 @@ int dop4(){
 
     process_words(input, longest_word);
 
-    printf("Результат: %s\n", input);
+    printf("Result: %s\n", input);
     if (longest_word[0] != '\0') {
-        printf("Самое длинное слово: %s\n", longest_word);
+        printf("the longest word: %s\n", longest_word);
     } else {
-        printf("Самое длинное слово не найдено.\n");
+        printf("the longest word was not found.\n");
     }
 
     return 0;
@@ -272,7 +272,7 @@ int lab5(){
     int g[10];
     int min = 0, max = 0;
     int i;
-    printf("Введите 10 целых чисел: ");
+    printf("enter 10 integers: ");
     for (i = 0; i < 10; i++) {
         scanf("%d", &g[i]);
     }
@@ -289,7 +289,7 @@ int lab5(){
     for (i = start; i < end; i++) {
         g[i] = 0;
     }
-    printf("Массив после обнуления:");
+    printf("Array after zeroing:");
     for (i = 0; i < 10; i++) {
         printf("%d ", g[i]);
     }
@@ -310,7 +310,7 @@ int dop5(){
     int g[10];
     int min = 0, max = 0;
     int i;
-    printf("Введите 10 целых чисел: ");
+    printf("enter 10 integers: ");
     for (i = 0; i < 10; i++) {
         scanf("%d", &g[i]);
     }
@@ -327,12 +327,12 @@ int dop5(){
     int end = min < max ? max : min;
 
     double average = avg(g, start, end);
-    printf("\nСреднее арифметическое чисел, которые должны обнулиться: %.2lf\n", average);
+    printf("\nThe arithmetic mean of the numbers that should be reset to zero: %.2lf\n", average);
 
     for (i = start; i < end; i++) {
         g[i] = 0;
     }
-    printf("Массив после обнуления:");
+    printf("Array after zeroing:");
     for (i = 0; i < 10; i++) {
         printf("%d ", g[i]);
     }
@@ -359,7 +359,7 @@ int lab6(){
     int arr[N][K];
     int i, j;
 
-    printf("Введите элементы массива %d на %d:\n", N, K);
+    printf("Enter the elements of the %d by %d array:\n", N, K);
     for (i = 0; i < N; i++) {
         for (j = 0; j < K; j++) {
             scanf("%d", &arr[i][j]);
@@ -373,9 +373,9 @@ int lab6(){
     }
 
     if (ar_prog(arr)) {
-        printf("Массив является арифметической прогрессией\n");
+        printf("The array is an arithmetic progression\n");
     } else {
-        printf("Массив не является арифметической прогрессией\n");
+        printf("The array is not an arithmetic progression\n");
     }
     return 0;
 }
@@ -415,14 +415,14 @@ int dop6(){
     int arr[N][K];
     int i, j;
 
-    printf("Введите элементы массива %d на %d:\n", N, K);
+    printf("Enter the elements of the %d by %d array:\n", N, K);
     for (i = 0; i < N; i++) {
         for (j = 0; j < K; j++) {
             scanf("%d", &arr[i][j]);
         }
     }
     selection_sort(arr);
-    printf("\nОтсортированный массив:\n");
+    printf("\nSorted array:\n");
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < K; j++){
             printf("%d ", arr[i][j]);
@@ -431,9 +431,9 @@ int dop6(){
     }
 
     if (ar_prog(arr)) {
-        printf("Массив является арифметической прогрессией\n");
+        printf("The array is an arithmetic progression\n");
     } else {
-        printf("Массив не является арифметической прогрессией\n");
+        printf("The array is not an arithmetic progression\n");
     }
     return 0;
 }
@@ -449,11 +449,11 @@ int lab7(){
 
     unsigned long n;
     int k;
-    printf("Введите N: ");
+    printf("Enter N: ");
     scanf("%ld", &n);
-    printf("Введите K: ");
+    printf("Enter K: ");
     scanf("%d", &k);
     unsigned long result=cycle(n, k);
-    printf("Результат циклического сдвига: %ld\n", result);
+    printf("The result of a cyclic shift: %ld\n", result);
     return 0;
 }
