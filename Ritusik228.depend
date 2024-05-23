@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1716454324 source:c:\users\tonit\onedrive\desktop\ашђр\ritusik228\lr.c
+	"lr.h"
+
+1716454324 c:\users\tonit\onedrive\desktop\ашђр\ritusik228\lr.h
+	"stdio.h"
+
+1716454324 source:c:\users\tonit\onedrive\desktop\ашђр\ritusik228\main.c
+	"lr.h"
+
